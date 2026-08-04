@@ -1,0 +1,10 @@
+La idea central:
+Explorar la Vía Láctea, sus estrellas, sus objetos más misteriosos y las galaxias que existen más allá.
+
+
+Para el index,  mostrar cuatro tarjetas que lleven a las páginas secundarias:
+
+Nuestra galaxia ---->via-lactea.html
+Vida de las estrellas ---->estrellas.html
+Misterios del cosmos---->objetos-cosmicos.html
+Galaxias lejanas ---->otras-galaxias.html
