@@ -3,21 +3,24 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="./styles/style.css">
     <title>Más allá de las estrellas | Inicio</title>
 </head>
 <body>
     <header>
         <figure>
-            <img src="./assets/logo-pagina.png" alt="Logo de Más allá de las estrellas" title="Más allá de las estrellas">
+            <img class = "logo" src="./assets/logo-pagina.png" alt="Logo de Más allá de las estrellas" title="Más allá de las estrellas">
         </figure>
 
         <nav>
             <ul>
-                <li><a href="./index.html">Inicio</a></li>
-                <li><a href="./pages/via-lactea.html">Vía Láctea</a></li>
-                <li><a href="./pages/estrellas.html">Estrellas</a></li>
-                <li><a href="./pages/objetos-cosmicos.html">Objetos cósmicos</a></li>
-                <li><a href="./pages/otras-galaxias.html">Otras galaxias</a></li>
+                <li><a class = "nav-link" href="./index.html">Inicio</a></li>
+                <li><a class = "nav-link" href="./pages/via-lactea.html">Vía Láctea</a></li>
+                <li><a class = "nav-link" href="./pages/estrellas.html">Estrellas</a></li>
+                <li><a class = "nav-link" href="./pages/objetos-cosmicos.html">Objetos cósmicos</a></li>
+                <li><a class = "nav-link" href="./pages/otras-galaxias.html">Otras galaxias</a></li>
             </ul>
         </nav>
     </header>
@@ -28,7 +31,7 @@
             <p>Explora la Vía Láctea, descubre cómo nacen las estrellas y conoce los objetos más fascinantes del universo.</p>
         </section>
 
-        <section id="informacion-general">
+        <section >
             <h2>Información general</h2>
             <p>Más allá de las estrellas es un sitio dedicado a la divulgación astronómica.
                  Aquí encontrarás información sobre nuestra galaxia, la evolución de las estrellas, los objetos cósmicos y otras galaxias del universo.</p>
@@ -43,7 +46,7 @@
             </figure>
         </section>
 
-        <section id="destacados">
+        <section >
             <h2>Temas destacados</h2>
             <article>
                 <h3>Nuestra galaxia</h3>
@@ -53,7 +56,7 @@
                     y la ubicación de nuestro sistema solar.
                 </p>
 
-                <a href="./pages/via-lactea.html">Explorar la Vía Láctea</a>
+                <a class = "nav-link" href="./pages/via-lactea.html">Explorar la Vía Láctea</a>
             </article>
 
             <article>
@@ -66,7 +69,7 @@
                     cómo cambian durante millones de años y qué ocurre al final de sus vidas.
                 </p>
 
-                <a href="./pages/estrellas.html">Descubrir las estrellas</a>
+                <a class = "nav-link" href="./pages/estrellas.html">Descubrir las estrellas</a>
             </article>
 
             <article>
@@ -77,7 +80,7 @@
                 </p>
 
                 
-                <a href="./pages/objetos-cosmicos.html">Conocer los objetos cósmicos</a>
+                <a class = "nav-link" href="./pages/objetos-cosmicos.html">Conocer los objetos cósmicos</a>
             </article>
 
             <article>
@@ -89,7 +92,7 @@
                     además de nuestras vecinas cósmicas más cercanas.
                 </p>
 
-                <a href="./pages/otras-galaxias.html">Explorar otras galaxias</a>
+                <a class = "nav-link" href="./pages/otras-galaxias.html">Explorar otras galaxias</a>
             </article>
 
         </section>
@@ -99,18 +102,21 @@
 
 
     <footer>
-        <nav aria-label="Redes sociales">
-            <ul class="redes-sociales">
+        <nav class="footer-nav">
+            <ul>
 
                 <li>
                     <a href="https://x.com/" target="_blank" rel="noopener noreferrer">
-                        <img src="./assets/logo-x.png" alt="Visitar nuestro perfil de X">
+                        <img class = "RRSS-img"
+                         src="./assets/logo-x.png"
+                          alt="Visitar nuestro perfil de X">
                     </a>
                 </li>
 
                 <li>
                     <a href="https://www.instagram.com/" target="_blank" rel="noopener noreferrer">
                         <img
+                            class = "RRSS-img"
                             src="./assets/logo-instagram.png"
                             alt="Visitar nuestro perfil de Instagram"
                         >
@@ -120,6 +126,7 @@
                 <li>
                     <a href="https://www.facebook.com/" target="_blank" rel="noopener noreferrer">
                         <img
+                            class = "RRSS-img"
                             src="./assets/logo-facebook.png"
                             alt="Visitar nuestro perfil de Facebook"
                         >

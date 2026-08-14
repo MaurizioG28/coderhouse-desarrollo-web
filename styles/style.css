@@ -1,0 +1,97 @@
+/*selector(etiqueta,id,clase){
+    propiedad:valor;
+
+}*/
+/*  font : roboto
+    font-family: "Roboto", sans-serif;
+*/
+@import url('https://fonts.googleapis.com/css2?family=Bitcount+Prop+Single:wght@100..900&family=MedievalSharp&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
+
+/*  font : Space Grotesk
+    font-family: "Space Grotesk", sans-serif;
+*/
+
+@import url('https://fonts.googleapis.com/css2?family=Bitcount+Prop+Single:wght@100..900&family=MedievalSharp&family=Roboto:ital,wght@0,100..900;1,100..900&family=Space+Grotesk:wght@300..700&display=swap');
+
+
+/*body*/
+body {
+    background: linear-gradient(10deg,#002263,#65AFFF,#47207F);
+}
+
+figcaption{
+    color: white;
+    font-family: "Roboto", sans-serif;
+}
+
+/* header */
+header {
+    
+}
+
+.logo {
+    width: 10vw;
+    height: 15vh;
+}
+
+header nav ul li {
+    list-style: none;
+}
+.nav-link{
+    text-decoration: none;
+    color: #65AFFF;
+}
+
+/* main */
+p {
+    font-family: "Roboto", sans-serif;
+    color: white;
+    font-size: 1rem;
+    font-weight: 400 ;
+}
+
+h1 {
+    font-family : "Space Grotesk",sans-serif;
+    font-size: 3rem;
+    font-weight: 700;
+    color:#47207F;
+
+}
+
+h2 {
+    font-family : "Space Grotesk",sans-serif;
+    font-size: 2.5rem;
+    font-weight: 600;
+    color:#47207F;
+}
+ h3, h4, h5, h6{
+    font-family : "Space Grotesk",sans-serif;
+    font-size: 2rem;
+    font-weight: 500;
+    color:#47207F;
+}
+
+ul li {
+    color: white;
+    font-family: "Roboto", sans-serif;
+    font-size: 1rem;
+    font-weight: 400;
+}
+
+/* footer */
+
+footer {
+    color: white;
+    font-family: "Roboto", sans-serif;
+    font-size: 1rem;
+    font-weight: 400;
+}
+.footer-nav ul{
+    list-style: none;
+}
+
+.RRSS-img{
+    height: 5vh;
+    width: auto;
+}
+

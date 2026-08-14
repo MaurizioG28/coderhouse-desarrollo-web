@@ -8,3 +8,26 @@ Nuestra galaxia ---->via-lactea.html
 Vida de las estrellas ---->estrellas.html
 Misterios del cosmos---->objetos-cosmicos.html
 Galaxias lejanas ---->otras-galaxias.html
+
+
+*css
+
+FUENTE CONTENIDO:ROBOTO
+FUENTE TITULOS Y ENLACES: Space Grotesk,
+
+/* COLOR PRIMARIO
+   Para zonas dominantes del sitio:
+   header, footer o fondo principal
+*/
+#002263
+
+/* COLOR SECUNDARIO
+   Para enlaces, botones, detalles o elementos que necesiten destacar
+*/
+#65AFFF
+
+/* COLOR DE ACENTO
+   Para hover, bordes, títulos especiales o pequeños detalles visuales
+*/
+#47207F
+
