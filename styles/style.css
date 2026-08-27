@@ -14,79 +14,148 @@
 @import url('https://fonts.googleapis.com/css2?family=Bitcount+Prop+Single:wght@100..900&family=MedievalSharp&family=Roboto:ital,wght@0,100..900;1,100..900&family=Space+Grotesk:wght@300..700&display=swap');
 
 
+/*Reset del CSS*/
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+:root{
+    --bg-ppl: #65AFFF  ;  /*header, footer o fondo principal*/
+    --bg-sec:   #47207F; /*Para enlaces, botones, detalles o elementos que necesiten destacar*/
+    --bg-detalles: #002263;/* para bordes, titulos o pequeños detalles*/
+    --font-ppal: "Roboto", sans-serif;
+    --font-sec:"Space Grotesk",sans-serif;
+    --color-text: #000000;
+}
+
 /*body*/
 body {
-    background: linear-gradient(10deg,#002263,#65AFFF,#47207F);
+    /*background: linear-gradient(10deg,var(--bg-ppl),var(--bg-sec),var(--bg-detalles));*/
 }
 
 figcaption{
-    color: white;
-    font-family: "Roboto", sans-serif;
+    color: var(--color-text);
+    font-family: var(--font-ppal);
 }
 
 /* header */
 header {
-    
+    display: flex;
+    justify-content:space-between;
+    align-items: center;
+    position: sticky;
+    top: 0;
+    padding: 0 20px;
+    background-color: var(--bg-ppl);
+
+}
+
+.nav-bar{
+    display: flex;
+    gap: 10px;
 }
 
 .logo {
-    width: 10vw;
-    height: 15vh;
+    width: 5vw;
+    height: auto;
 }
 
 header nav ul li {
     list-style: none;
+
 }
 .nav-link{
     text-decoration: none;
-    color: #65AFFF;
+    color: var(--bg-sec);
+    font-weight: 700;
+    padding: 15px;
+    border: 2px solid black;
+    border-radius:  15px;
+    margin: 15px;
 }
 
 /* main */
+.home {
+    height: 200vh;
+}
 p {
-    font-family: "Roboto", sans-serif;
-    color: white;
+    font-family: var(--font-ppal);
+    color: var(--color-text);
     font-size: 1rem;
     font-weight: 400 ;
 }
 
 h1 {
-    font-family : "Space Grotesk",sans-serif;
+    font-family : var(--font-sec);
     font-size: 3rem;
     font-weight: 700;
-    color:#47207F;
+    color:var(--bg-detalles);
 
 }
 
 h2 {
-    font-family : "Space Grotesk",sans-serif;
+    font-family :  var(--font-sec);
     font-size: 2.5rem;
     font-weight: 600;
-    color:#47207F;
+    color:var(--bg-detalles);
 }
  h3, h4, h5, h6{
-    font-family : "Space Grotesk",sans-serif;
+    font-family :  var(--font-sec);
     font-size: 2rem;
     font-weight: 500;
-    color:#47207F;
+    color:var(--bg-detalles);
 }
 
 ul li {
-    color: white;
-    font-family: "Roboto", sans-serif;
+    color: var(--color-text);
+    font-family: var(--font-ppal);
     font-size: 1rem;
     font-weight: 400;
 }
+.contenedor-tarjetas {
+    
+    display: flex;
+    gap: 20px;
 
+    /* Permite que las tarjetas bajen de línea si no entran */
+    flex-wrap: wrap;
+
+    /* Separa esta zona del título */
+    margin-top: 20px;
+}
+
+.tarjeta {
+    display: flex;
+    flex-direction: column;
+    flex: 1 1 400px;
+    min-width: 250px;
+    padding: 20px;
+    border: 1px solid var(--bg-detalles);
+    border-radius: 15px;
+}
 /* footer */
 
 footer {
-    color: white;
-    font-family: "Roboto", sans-serif;
+    padding: 0 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: var(--color-text);
+    font-family: var(--font-ppal);
     font-size: 1rem;
-    font-weight: 400;
+    font-weight: 900;
+    font-size: 1rem;
 }
-.footer-nav ul{
+
+.rs {
+    display: flex;
+    gap: 20px;
+}
+
+.footer-nav ul li{
     list-style: none;
 }
 

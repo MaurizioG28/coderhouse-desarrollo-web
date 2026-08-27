@@ -9,22 +9,25 @@
 </head>
 <body>
     <header>
-        <figure>
-            <img  class = "logo" src="../assets/logo-pagina.png" alt="Logo de Más allá de las estrellas" title="Más allá de las estrellas">
-        </figure>
+        <a href="../index.html" aria-label="Inicio" title="Inicio">
+            <figure>
+                <img class = "logo" src="../assets/logo-pagina.png" alt="Logo de Más allá de las estrellas" title="Más allá de las estrellas">
+            </figure>
+        </a>
 
-        <nav>
-            <ul>
-                <li><a class = "nav-link"  href="../index.html">Inicio</a></li>
-                <li><a class = "nav-link"  href="./via-lactea.html">Via Lactea</a></li>
-                <li><a class = "nav-link"  href="./estrellas.html">Estrellas</a></li>
-                <li><a class = "nav-link"  href="./objetos-cosmicos.html">Objetos cósmicos</a></li>
-                <li><a class = "nav-link"  href="./otras-galaxias.html">Otras Galaxias</a></li>
+    
+        <nav >
+            <ul class = "nav-bar">
+                <li><a class = "nav-link" href="../index.html">Inicio</a></li>
+                <li><a class = "nav-link" href="./via-lactea.html">Vía Láctea</a></li>
+                <li><a class = "nav-link" href="./estrellas.html">Estrellas</a></li>
+                <li><a class = "nav-link" href="./objetos-cosmicos.html">Objetos cósmicos</a></li>
+                <li><a class = "nav-link" href="./otras-galaxias.html">Otras galaxias</a></li>
             </ul>
         </nav>
     </header>
     
-    <main>
+    <main class = "home">
         <!-- Presentación principal de la página -->
         <section>
             <h1>Objetos cósmicos</h1>
@@ -94,8 +97,13 @@
     </main>
 
     <footer>
+        <p>Desarrollado por Maurizio Giannantonio</p>
+
+        <p>
+            &copy; <span id="year"></span> Todos los derechos reservados
+        </p>
         <nav  class="footer-nav">
-            <ul >
+            <ul class = "rs">
 
                 <li>
                     <a href="https://x.com/" target="_blank" rel="noopener noreferrer">
@@ -127,12 +135,6 @@
 
             </ul>
         </nav>
-
-        <p>Desarrollado por Maurizio Giannantonio</p>
-
-        <p>
-            &copy; <span id="year"></span> Todos los derechos reservados
-        </p>
     </footer>
 
     <script>
