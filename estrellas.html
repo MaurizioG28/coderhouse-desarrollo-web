@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <!-- CSS -->
+    <link rel="stylesheet" href="../styles/style.css">
+    <title>Más allá de las estrellas | Estrellas</title>
+</head>
+<body>
+    <header>
+        <a href="../index.html" aria-label="Inicio" title="Inicio">
+            <figure>
+                <img class = "logo" src="../assets/logo-pagina.png" alt="Logo de Más allá de las estrellas" title="Más allá de las estrellas">
+            </figure>
+        </a>
+
+    
+        <nav >
+            <ul class = "nav-bar">
+                <li><a class = "nav-link" href="../index.html">Inicio</a></li>
+                <li><a class = "nav-link" href="./via-lactea.html">Vía Láctea</a></li>
+                <li><a class = "nav-link" href="./estrellas.html">Estrellas</a></li>
+                <li><a class = "nav-link" href="./objetos-cosmicos.html">Objetos cósmicos</a></li>
+                <li><a class = "nav-link" href="./otras-galaxias.html">Otras galaxias</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main class = "home">
+        <section>
+            <h1>Estrellas: nacimiento y evolución</h1>
+
+            <p>
+                Las estrellas son enormes cuerpos celestes que producen luz y energía.
+                Su evolución depende principalmente de la cantidad de materia con la
+                que se formaron.
+            </p>
+        </section>
+
+        <section>
+            <h2>El nacimiento de una estrella</h2>
+
+            <p>
+                Las estrellas comienzan a formarse dentro de grandes nubes de gas y
+                polvo llamadas nebulosas. La gravedad concentra parte de ese material
+                hasta originar una nueva estrella.
+            </p>
+        </section>
+
+        <!-- Lista con las etapas generales de la evolución estelar -->
+        <section>
+            <h2>Etapas de su evolución</h2>
+
+            <ol>
+                <li>Formación dentro de una nebulosa.</li>
+                <li>Nacimiento de una protoestrella.</li>
+                <li>Etapa estable de la estrella.</li>
+                <li>Expansión y transformación final.</li>
+            </ol>
+        </section>
+
+        <!-- Información sobre posibles finales de una estrella -->
+        <section>
+            <h2>El final de las estrellas</h2>
+
+            <p>
+                Algunas estrellas terminan convirtiéndose en enanas blancas. Otras,
+                especialmente las de mayor tamaño, pueden experimentar grandes
+                explosiones y dejar como resultado objetos extremadamente densos.
+            </p>
+        </section>
+
+        <!-- Imagen relacionada con la formación estelar -->
+        <figure>
+            <img
+                src="../assets/estrellas.jpg"
+                alt="Estrellas brillando dentro de una nebulosa"
+                title="Nacimiento de las estrellas"
+            >
+
+            <figcaption>
+                Las nebulosas contienen materiales que pueden participar en la formación
+                de nuevas estrellas.
+            </figcaption>
+        </figure>
+    </main>
+
+    <footer>
+
+        <p>Desarrollado por Maurizio Giannantonio</p>
+
+        <p>
+            &copy; <span id="year"></span> Todos los derechos reservados
+        </p>
+        <nav  class="footer-nav">
+            <ul class = "rs">
+
+                <li>
+                    <a href="https://x.com/" target="_blank" rel="noopener noreferrer">
+                        <img class = "RRSS-img"
+                         src="../assets/logo-x.png"
+                          alt="Visitar nuestro perfil de X">
+                    </a>
+                </li>
+
+                <li>
+                    <a href="https://www.instagram.com/" target="_blank" rel="noopener noreferrer">
+                        <img
+                            class = "RRSS-img"
+                            src="../assets/logo-instagram.png"
+                            alt="Visitar nuestro perfil de Instagram"
+                        >
+                    </a>
+                </li>
+
+                <li>
+                    <a href="https://www.facebook.com/" target="_blank" rel="noopener noreferrer">
+                        <img
+                            class = "RRSS-img"
+                            src="../assets/logo-facebook.png"
+                            alt="Visitar nuestro perfil de Facebook"
+                        >
+                    </a>
+                </li>
+
+            </ul>
+        </nav>
+
+    </footer>
+
+    <script>
+        const yearElement = document.getElementById("year");
+
+        if (yearElement) {
+            yearElement.textContent = new Date().getFullYear();
+        }
+    </script>
+
+</body>
+</html>
+
+
+
+
+

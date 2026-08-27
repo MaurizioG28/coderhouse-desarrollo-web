@@ -10,12 +10,16 @@
 </head>
 <body>
     <header>
-        <figure>
-            <img class = "logo" src="./assets/logo-pagina.png" alt="Logo de Más allá de las estrellas" title="Más allá de las estrellas">
-        </figure>
+        <a href="#" aria-label="Inicio" title="Inicio">
+            <figure>
+                <img class = "logo" src="./assets/logo-pagina.png" alt="Logo de Más allá de las estrellas" title="Más allá de las estrellas">
+            </figure>
+        </a>
 
-        <nav>
-            <ul>
+
+        
+        <nav >
+            <ul class = "nav-bar">
                 <li><a class = "nav-link" href="./index.html">Inicio</a></li>
                 <li><a class = "nav-link" href="./pages/via-lactea.html">Vía Láctea</a></li>
                 <li><a class = "nav-link" href="./pages/estrellas.html">Estrellas</a></li>
@@ -25,7 +29,7 @@
         </nav>
     </header>
 
-    <main>
+    <main class="home">
         <section>
             <h1>Más allá de las estrellas</h1>
             <p>Explora la Vía Láctea, descubre cómo nacen las estrellas y conoce los objetos más fascinantes del universo.</p>
@@ -46,64 +50,111 @@
             </figure>
         </section>
 
-        <section >
-            <h2>Temas destacados</h2>
-            <article>
-                <h3>Nuestra galaxia</h3>
+        <!-- Sección de temas destacados -->
+<section class="temas-destacados">
 
-                <p>
-                    Conoce la estructura de la Vía Láctea, sus principales regiones
-                    y la ubicación de nuestro sistema solar.
-                </p>
+    <!-- Título general de la sección -->
+    <h2>Temas destacados</h2>
 
-                <a class = "nav-link" href="./pages/via-lactea.html">Explorar la Vía Láctea</a>
-            </article>
+    <!--
+        Este contenedor será el padre Flexbox
+        de las cuatro tarjetas.
+    -->
+    <div class="contenedor-tarjetas">
 
-            <article>
+        <!-- Tarjeta 1 -->
+        <article class="tarjeta">
 
-                <h3>Estrellas: nacimiento y evolución</h3>
+            <!-- Título de la tarjeta -->
+            <h3>Nuestra galaxia</h3>
 
+            <!-- Descripción breve -->
+            <p>
+                Conoce la estructura de la Vía Láctea, sus principales regiones
+                y la ubicación de nuestro sistema solar.
+            </p>
 
-                <p>
-                    Conoce cómo nacen las estrellas dentro de enormes nubes de gas, 
-                    cómo cambian durante millones de años y qué ocurre al final de sus vidas.
-                </p>
+            <!-- Enlace hacia la página correspondiente -->
+            <a class="tarjeta-link" href="./pages/via-lactea.html">
+                Explorar la Vía Láctea
+            </a>
 
-                <a class = "nav-link" href="./pages/estrellas.html">Descubrir las estrellas</a>
-            </article>
+        </article>
 
-            <article>
-                <h3>Objetos cósmicos</h3>
+        <!-- Tarjeta 2 -->
+        <article class="tarjeta">
 
-                <p>
-                    Explora nebulosas, cúmulos estelares, púlsares y agujeros negros, algunos de los objetos más sorprendentes de nuestra galaxia.
-                </p>
+            <!-- Título de la tarjeta -->
+            <h3>Estrellas: nacimiento y evolución</h3>
 
-                
-                <a class = "nav-link" href="./pages/objetos-cosmicos.html">Conocer los objetos cósmicos</a>
-            </article>
+            <!-- Descripción breve -->
+            <p>
+                Conoce cómo nacen las estrellas dentro de enormes nubes de gas,
+                cómo cambian durante millones de años y qué ocurre al final de sus vidas.
+            </p>
 
-            <article>
-        
-                <h3>Otras galaxias</h3>
+            <!-- Enlace hacia la página correspondiente -->
+            <a class="tarjeta-link" href="./pages/estrellas.html">
+                Descubrir las estrellas
+            </a>
 
-                <p>
-                    Viaja más allá de nuestra galaxia para conocer galaxias espirales, elípticas e irregulares,
-                    además de nuestras vecinas cósmicas más cercanas.
-                </p>
+        </article>
 
-                <a class = "nav-link" href="./pages/otras-galaxias.html">Explorar otras galaxias</a>
-            </article>
+        <!-- Tarjeta 3 -->
+        <article class="tarjeta">
 
-        </section>
+            <!-- Título de la tarjeta -->
+            <h3>Objetos cósmicos</h3>
+
+            <!-- Descripción breve -->
+            <p>
+                Explora nebulosas, cúmulos estelares, púlsares y agujeros negros,
+                algunos de los objetos más sorprendentes de nuestra galaxia.
+            </p>
+
+            <!-- Enlace hacia la página correspondiente -->
+            <a class="tarjeta-link" href="./pages/objetos-cosmicos.html">
+                Conocer los objetos cósmicos
+            </a>
+
+        </article>
+
+        <!-- Tarjeta 4 -->
+        <article class="tarjeta">
+
+            <!-- Título de la tarjeta -->
+            <h3>Otras galaxias</h3>
+
+            <!-- Descripción breve -->
+            <p>
+                Viaja más allá de nuestra galaxia para conocer galaxias espirales,
+                elípticas e irregulares, además de nuestras vecinas cósmicas más cercanas.
+            </p>
+
+            <!-- Enlace hacia la página correspondiente -->
+            <a class="tarjeta-link" href="./pages/otras-galaxias.html">
+                Explorar otras galaxias
+            </a>
+
+        </article>
+
+    </div>
+
+</section>
 
 
     </main>
 
 
     <footer>
+
+        <p>Desarrollado por Maurizio Giannantonio</p>
+
+        <p>
+            &copy; <span id="year"></span> Todos los derechos reservados
+        </p>
         <nav class="footer-nav">
-            <ul>
+            <ul class = "rs">
 
                 <li>
                     <a href="https://x.com/" target="_blank" rel="noopener noreferrer">
@@ -136,11 +187,7 @@
             </ul>
         </nav>
 
-        <p>Desarrollado por Maurizio Giannantonio</p>
 
-        <p>
-            &copy; <span id="year"></span> Todos los derechos reservados
-        </p>
     </footer>
 
     <script>

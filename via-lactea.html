@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- CSS -->
+    <link rel="stylesheet" href="../styles/style.css">
+    <title>Más allá de las estrellas | Vía Láctea</title>
+</head>
+<body>
+    <header>
+        <a href="../index.html" aria-label="Inicio" title="Inicio">
+            <figure>
+                <img class = "logo" src="../assets/logo-pagina.png" alt="Logo de Más allá de las estrellas" title="Más allá de las estrellas">
+            </figure>
+        </a>
+
+    
+        <nav >
+            <ul class = "nav-bar">
+                <li><a class = "nav-link" href="../index.html">Inicio</a></li>
+                <li><a class = "nav-link" href="./via-lactea.html">Vía Láctea</a></li>
+                <li><a class = "nav-link" href="./estrellas.html">Estrellas</a></li>
+                <li><a class = "nav-link" href="./objetos-cosmicos.html">Objetos cósmicos</a></li>
+                <li><a class = "nav-link" href="./otras-galaxias.html">Otras galaxias</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main class = "home">
+        <section>
+            <h1>La Vía Láctea</h1>
+
+            <p>
+                La Vía Láctea es la galaxia en la que se encuentra nuestro sistema solar.
+                Está formada por estrellas, planetas, nubes de gas, polvo cósmico y otros
+                objetos que permanecen unidos por la gravedad.
+            </p>
+        </section>
+
+        <section>
+            <h2>Estructura de nuestra galaxia</h2>
+
+            <p>
+                La Vía Láctea posee una región central rodeada por distintos brazos
+                espirales. En estos brazos se encuentran numerosas estrellas jóvenes,
+                nebulosas y zonas donde pueden formarse nuevos sistemas estelares.
+            </p>
+
+            <ul class="list-">
+                <li>El núcleo galáctico.</li>
+                <li>El disco galáctico.</li>
+                <li>Los brazos espirales.</li>
+                <li>El halo galáctico.</li>
+            </ul>
+        </section>
+
+        <section>
+            <h2>Nuestra ubicación</h2>
+
+            <p>
+                El sistema solar se encuentra en una región conocida como el brazo de
+                Orión. Desde allí observamos la Vía Láctea como una franja luminosa que
+                atraviesa el cielo nocturno.
+            </p>
+        </section>
+
+        <figure>
+            <img
+                src="../assets/via-lactea.jpg"
+                alt="Representación de la galaxia Vía Láctea"
+                title="La Vía Láctea"
+            >
+
+            <figcaption>
+                Representación de la estructura general de la Vía Láctea.
+            </figcaption>
+        </figure>
+    </main>
+
+    <footer>
+        <p>Desarrollado por Maurizio Giannantonio</p>
+
+        <p>
+        &copy; <span id="year"></span> Todos los derechos reservados
+        </p>
+        <nav  class="footer-nav">
+            <ul class = "rs">
+
+                <li>
+                    <a href="https://x.com/" target="_blank" rel="noopener noreferrer">
+                        <img class = "RRSS-img"
+                         src="../assets/logo-x.png"
+                          alt="Visitar nuestro perfil de X">
+                    </a>
+                </li>
+
+                <li>
+                    <a href="https://www.instagram.com/" target="_blank" rel="noopener noreferrer">
+                        <img
+                            class = "RRSS-img"
+                            src="../assets/logo-instagram.png"
+                            alt="Visitar nuestro perfil de Instagram"
+                        >
+                    </a>
+                </li>
+
+                <li>
+                    <a href="https://www.facebook.com/" target="_blank" rel="noopener noreferrer">
+                        <img
+                            class = "RRSS-img"
+                            src="../assets/logo-facebook.png"
+                            alt="Visitar nuestro perfil de Facebook"
+                        >
+                    </a>
+                </li>
+
+            </ul>
+        </nav>
+
+
+    </footer>
+
+    <script>
+        const yearElement = document.getElementById("year");
+
+        if (yearElement) {
+            yearElement.textContent = new Date().getFullYear();
+        }
+    </script>
+
+</body>
+</html>
