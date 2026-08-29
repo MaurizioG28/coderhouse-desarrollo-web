@@ -30,117 +30,130 @@
     </header>
 
     <main class="home">
-        <section>
-            <h1>Más allá de las estrellas</h1>
-            <p>Explora la Vía Láctea, descubre cómo nacen las estrellas y conoce los objetos más fascinantes del universo.</p>
+
+
+            <section class = "info-general" >
+                <div class = "info-texto" >
+                    <h1>Más allá de las estrellas</h1>
+                    <p>
+                        Más allá de las estrellas es un sitio dedicado a la divulgación astronómica.
+                        Aquí encontrarás información sobre nuestra galaxia, la evolución de las estrellas,
+                        los objetos cósmicos y otras galaxias del universo.
+                    </p>
+
+                    <p>
+                        El objetivo del sitio es presentar estos temas de forma clara y accesible,
+                        organizando la información en distintas secciones para facilitar la exploración
+                        de cada contenido.
+                    </p>
+
+                    <p>
+                        A lo largo de las diferentes páginas podrás conocer cómo está formada la Vía Láctea,
+                        cómo nacen y evolucionan las estrellas, qué características tienen algunos de los
+                        objetos más sorprendentes del espacio y qué tipos de galaxias existen más allá de
+                        nuestro entorno cercano.
+                    </p>
+
+                    <p>
+                        Cada sección está pensada como una introducción a estos temas, acompañada por
+                        descripciones e imágenes que ayudan a comprender mejor la escala y la diversidad
+                        del universo.
+                    </p>
+                </div>
+
+                <figure class ="info-imagen">
+                    <img src="./assets/via-lactea.jpg"
+                        alt="Imagen de la galaxia Vía Láctea"
+                        title="La Vía Láctea">
+                </figure>
+            </section>
+
+
+        <section class="temas-destacados">
+
+
+            <h2>Temas destacados</h2>
+
+            <!--
+                Este contenedor será el padre Flexbox
+                de las cuatro tarjetas.
+            -->
+            <div class="contenedor-tarjetas">
+
+                <!-- Tarjeta 1 -->
+                <article class="tarjeta">
+
+                    <!-- Título de la tarjeta -->
+                    <h3>Nuestra galaxia</h3>
+
+                    <!-- Descripción breve -->
+                    <p>
+                        Conoce la estructura de la Vía Láctea, sus principales regiones
+                        y la ubicación de nuestro sistema solar.
+                    </p>
+
+                    <!-- Enlace hacia la página correspondiente -->
+                    <a class="tarjeta-link" href="./pages/via-lactea.html">
+                        Explorar la Vía Láctea
+                    </a>
+
+                </article>
+
+                
+                <article class="tarjeta">
+
+
+                    <h3>Estrellas: nacimiento y evolución</h3>
+
+
+                    <p>
+                        Conoce cómo nacen las estrellas dentro de enormes nubes de gas,
+                        cómo cambian durante millones de años y qué ocurre al final de sus vidas.
+                    </p>
+
+
+                    <a class="tarjeta-link" href="./pages/estrellas.html">
+                        Descubrir las estrellas
+                    </a>
+
+                </article>
+
+                <article class="tarjeta">
+
+                    <h3>Objetos cósmicos</h3>
+
+                    <p>
+                        Explora nebulosas, cúmulos estelares, púlsares y agujeros negros,
+                        algunos de los objetos más sorprendentes de nuestra galaxia.
+                    </p>
+
+                    <a class="tarjeta-link" href="./pages/objetos-cosmicos.html">
+                        Conocer los objetos cósmicos
+                    </a>
+
+                </article>
+
+
+                <article class="tarjeta">
+
+
+                    <h3>Otras galaxias</h3>
+
+
+                    <p>
+                        Viaja más allá de nuestra galaxia para conocer galaxias espirales,
+                        elípticas e irregulares, además de nuestras vecinas cósmicas más cercanas.
+                    </p>
+
+                    <a class="tarjeta-link" href="./pages/otras-galaxias.html">
+                        Explorar otras galaxias
+                    </a>
+
+                </article>
+
+            </div>
+
         </section>
-
-        <section >
-            <h2>Información general</h2>
-            <p>Más allá de las estrellas es un sitio dedicado a la divulgación astronómica.
-                 Aquí encontrarás información sobre nuestra galaxia, la evolución de las estrellas, los objetos cósmicos y otras galaxias del universo.</p>
-            <figure>
-                <img src="./assets/via-lactea.jpg"
-                    alt="Imagen de la galaxia Vía Láctea"
-                    title="La Vía Láctea">
-
-                <figcaption>
-                    Representación de la Vía Láctea.
-                </figcaption>
-            </figure>
-        </section>
-
-        <!-- Sección de temas destacados -->
-<section class="temas-destacados">
-
-    <!-- Título general de la sección -->
-    <h2>Temas destacados</h2>
-
-    <!--
-        Este contenedor será el padre Flexbox
-        de las cuatro tarjetas.
-    -->
-    <div class="contenedor-tarjetas">
-
-        <!-- Tarjeta 1 -->
-        <article class="tarjeta">
-
-            <!-- Título de la tarjeta -->
-            <h3>Nuestra galaxia</h3>
-
-            <!-- Descripción breve -->
-            <p>
-                Conoce la estructura de la Vía Láctea, sus principales regiones
-                y la ubicación de nuestro sistema solar.
-            </p>
-
-            <!-- Enlace hacia la página correspondiente -->
-            <a class="tarjeta-link" href="./pages/via-lactea.html">
-                Explorar la Vía Láctea
-            </a>
-
-        </article>
-
-        <!-- Tarjeta 2 -->
-        <article class="tarjeta">
-
-            <!-- Título de la tarjeta -->
-            <h3>Estrellas: nacimiento y evolución</h3>
-
-            <!-- Descripción breve -->
-            <p>
-                Conoce cómo nacen las estrellas dentro de enormes nubes de gas,
-                cómo cambian durante millones de años y qué ocurre al final de sus vidas.
-            </p>
-
-            <!-- Enlace hacia la página correspondiente -->
-            <a class="tarjeta-link" href="./pages/estrellas.html">
-                Descubrir las estrellas
-            </a>
-
-        </article>
-
-        <!-- Tarjeta 3 -->
-        <article class="tarjeta">
-
-            <!-- Título de la tarjeta -->
-            <h3>Objetos cósmicos</h3>
-
-            <!-- Descripción breve -->
-            <p>
-                Explora nebulosas, cúmulos estelares, púlsares y agujeros negros,
-                algunos de los objetos más sorprendentes de nuestra galaxia.
-            </p>
-
-            <!-- Enlace hacia la página correspondiente -->
-            <a class="tarjeta-link" href="./pages/objetos-cosmicos.html">
-                Conocer los objetos cósmicos
-            </a>
-
-        </article>
-
-        <!-- Tarjeta 4 -->
-        <article class="tarjeta">
-
-            <!-- Título de la tarjeta -->
-            <h3>Otras galaxias</h3>
-
-            <!-- Descripción breve -->
-            <p>
-                Viaja más allá de nuestra galaxia para conocer galaxias espirales,
-                elípticas e irregulares, además de nuestras vecinas cósmicas más cercanas.
-            </p>
-
-            <!-- Enlace hacia la página correspondiente -->
-            <a class="tarjeta-link" href="./pages/otras-galaxias.html">
-                Explorar otras galaxias
-            </a>
-
-        </article>
-
-    </div>
-
-</section>
 
 
     </main>

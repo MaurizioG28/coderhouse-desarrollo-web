@@ -1,59 +1,174 @@
-/*selector(etiqueta,id,clase){
-    propiedad:valor;
+/* ==================================================
+   IMPORTS
+   ================================================== */
 
-}*/
-/*  font : roboto
-    font-family: "Roboto", sans-serif;
-*/
+/* Fuente Roboto */
 @import url('https://fonts.googleapis.com/css2?family=Bitcount+Prop+Single:wght@100..900&family=MedievalSharp&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
 
-/*  font : Space Grotesk
-    font-family: "Space Grotesk", sans-serif;
-*/
-
+/* Fuente Space Grotesk */
 @import url('https://fonts.googleapis.com/css2?family=Bitcount+Prop+Single:wght@100..900&family=MedievalSharp&family=Roboto:ital,wght@0,100..900;1,100..900&family=Space+Grotesk:wght@300..700&display=swap');
 
 
-/*Reset del CSS*/
+/* ==================================================
+   RESET
+   ================================================== */
+
 * {
+    /* Elimina márgenes predeterminados */
     margin: 0;
+
+    /* Elimina padding predeterminado */
     padding: 0;
+
+    /* Incluye padding y border dentro del ancho total */
     box-sizing: border-box;
 }
 
 
-:root{
-    --bg-ppl: #65AFFF  ;  /*header, footer o fondo principal*/
-    --bg-sec:   #47207F; /*Para enlaces, botones, detalles o elementos que necesiten destacar*/
-    --bg-detalles: #002263;/* para bordes, titulos o pequeños detalles*/
+/* ==================================================
+   VARIABLES
+   ================================================== */
+
+:root {
+    /* Color principal para header y footer */
+    --bg-ppl: #65AFFF;
+
+    /* Color secundario para enlaces y detalles */
+    --bg-sec: #47207F;
+
+    /* Color para títulos, bordes y detalles */
+    --bg-detalles: #002263;
+
+    /* Fuente principal */
     --font-ppal: "Roboto", sans-serif;
-    --font-sec:"Space Grotesk",sans-serif;
+
+    /* Fuente secundaria */
+    --font-sec: "Space Grotesk", sans-serif;
+
+    /* Color general del texto */
     --color-text: #000000;
 }
 
-/*body*/
-body {
-    /*background: linear-gradient(10deg,var(--bg-ppl),var(--bg-sec),var(--bg-detalles));*/
+
+/* ==================================================
+   ESTILOS GENERALES
+   ================================================== */
+
+.home {
+    /* La página ocupa al menos toda la altura visible */
+    min-height: 100vh;
+
+    /* Mantiene el ancho automático */
+    width: auto;
 }
 
-figcaption{
+p {
+    /* Fuente general de párrafos */
+    font-family: var(--font-ppal);
+
+    /* Color general */
     color: var(--color-text);
+}
+
+h1 {
+    /* Fuente para títulos principales */
+    font-family: var(--font-sec);
+
+    /* Tamaño del título principal */
+    font-size: 3rem;
+
+    /* Peso fuerte */
+    font-weight: 900;
+
+    /* Color principal de títulos */
+    color: var(--bg-detalles);
+}
+
+h2 {
+    /* Fuente para títulos secundarios */
+    font-family: var(--font-sec);
+
+    /* Tamaño de segundo nivel */
+    font-size: 2.5rem;
+
+    /* Peso del título */
+    font-weight: 700;
+
+    /* Color del título */
+    color: var(--bg-detalles);
+}
+
+h3,
+h4,
+h5,
+h6 {
+    /* Fuente para niveles inferiores */
+    font-family: var(--font-sec);
+
+    /* Tamaño general */
+    font-size: 2rem;
+
+    /* Peso medio */
+    font-weight: 600;
+
+    /* Color */
+    color: var(--bg-detalles);
+}
+
+ul li {
+    /* Color de los elementos de lista */
+    color: var(--color-text);
+
+    /* Fuente general */
+    font-family: var(--font-ppal);
+
+    /* Tamaño de texto */
+    font-size: 1rem;
+
+    /* Peso normal */
+    font-weight: 400;
+}
+
+figcaption {
+    /* Color del texto descriptivo */
+    color: var(--color-text);
+
+    /* Fuente */
     font-family: var(--font-ppal);
 }
 
-/* header */
+
+/* ==================================================
+   HEADER Y NAVBAR
+   ================================================== */
+
 header {
+    /* Convierte el header en Flexbox */
     display: flex;
-    justify-content:space-between;
+
+    /* Coloca logo y navegación en extremos opuestos */
+    justify-content: space-between;
+
+    /* Centra los elementos verticalmente */
     align-items: center;
+
+    /* Mantiene el header visible al hacer scroll */
     position: sticky;
+
+    /* Lo fija en la parte superior */
     top: 0;
+
+    /* Espacio interno horizontal */
     padding: 0 20px;
+
+    /* Fondo del header */
     background-color: var(--bg-ppl);
 
+    /* Evita que otros elementos pasen por encima */
+    z-index: 10;
 }
 
-.nav-bar{
+.nav-bar {
     display: flex;
     gap: 10px;
 }
@@ -65,78 +180,194 @@ header {
 
 header nav ul li {
     list-style: none;
-
 }
-.nav-link{
+
+.nav-link {
+
     text-decoration: none;
     color: var(--bg-sec);
     font-weight: 700;
     padding: 15px;
     border: 2px solid black;
-    border-radius:  15px;
-    margin: 15px;
+    border-radius: 15px;
 }
 
-/* main */
-.home {
-    height: 200vh;
-}
-p {
-    font-family: var(--font-ppal);
-    color: var(--color-text);
-    font-size: 1rem;
-    font-weight: 400 ;
-}
 
-h1 {
-    font-family : var(--font-sec);
-    font-size: 3rem;
-    font-weight: 700;
-    color:var(--bg-detalles);
+/* ==================================================
+   INDEX
+   ================================================== */
 
-}
+/* ---------- Información general ---------- */
 
-h2 {
-    font-family :  var(--font-sec);
-    font-size: 2.5rem;
-    font-weight: 600;
-    color:var(--bg-detalles);
-}
- h3, h4, h5, h6{
-    font-family :  var(--font-sec);
-    font-size: 2rem;
-    font-weight: 500;
-    color:var(--bg-detalles);
-}
+.info-general {
 
-ul li {
-    color: var(--color-text);
-    font-family: var(--font-ppal);
-    font-size: 1rem;
-    font-weight: 400;
-}
-.contenedor-tarjetas {
-    
     display: flex;
-    gap: 20px;
+    gap: 30px;
+    align-items: flex-start;
+    padding: 20px;
+}
 
-    /* Permite que las tarjetas bajen de línea si no entran */
+.info-texto {
+
+    flex: 1;
+}
+
+.info-texto h1 {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.info-texto p {
+    margin-bottom: 15px;
+
+    /* Mejora la lectura */
+    line-height: 1.5;
+    font-size: 1.5rem;
+}
+
+.info-imagen {
+
+    flex: 1;
+    text-align: center;
+}
+
+.info-imagen img {
+    /* Mantiene proporción */
+    height: auto;
+
+    /* Limita el ancho */
+    width: 65%;
+
+    /* Redondea las esquinas */
+    border-radius: 20px;
+}
+
+
+/* ---------- Temas destacados ---------- */
+
+.temas-destacados {
+    /* Separa esta sección del footer */
+    margin-bottom: 30px;
+
+    /* Da espacio lateral */
+    padding: 0 20px;
+}
+
+.contenedor-tarjetas {
+
+    display: flex;
+
+    gap: 10px;
+
+    /* Permite que las tarjetas bajen de línea */
     flex-wrap: wrap;
 
-    /* Separa esta zona del título */
+    /* Separa las tarjetas del título */
     margin-top: 20px;
 }
 
 .tarjeta {
+    
     display: flex;
     flex-direction: column;
+    gap: 15px;
+
+    /* Permite crecer y reducirse */
     flex: 1 1 400px;
+
+    /* Evita tarjetas demasiado angostas */
     min-width: 250px;
+
+    /* Espacio interno */
     padding: 20px;
+
+    /* Borde visual */
     border: 1px solid var(--bg-detalles);
+
+    /* Esquinas redondeadas */
     border-radius: 15px;
 }
-/* footer */
+
+
+/* ==================================================
+   PAGINAS SECUNDARIAS
+   ================================================== */
+
+/*
+   Acá irán los estilos específicos de:
+
+   - via-lactea.html
+   - estrellas.html
+   - objetos-cosmicos.html
+   - otras-galaxias.html
+*/
+
+
+/* ---------- VIA LACTEA ---------- */
+
+/*
+.via-intro {
+}
+
+.via-texto {
+}
+
+.via-imagen {
+}
+
+.via-detalles {
+}
+
+.via-card {
+}
+*/
+
+
+/* ---------- ESTRELLAS ---------- */
+
+/*
+.estrellas-intro {
+}
+
+.estrellas-etapas {
+}
+
+.estrellas-card {
+}
+*/
+
+
+/* ---------- OBJETOS COSMICOS ---------- */
+
+/*
+.objetos-intro {
+}
+
+.objetos-contenedor {
+}
+
+.objeto-card {
+}
+*/
+
+
+/* ---------- OTRAS GALAXIAS ---------- */
+
+/*
+.galaxias-intro {
+}
+
+.galaxias-tipos {
+}
+
+.galaxia-card {
+}
+*/
+
+
+/* ==================================================
+   FOOTER
+   ================================================== */
 
 footer {
     padding: 0 20px;
@@ -147,20 +378,20 @@ footer {
     font-family: var(--font-ppal);
     font-size: 1rem;
     font-weight: 900;
-    font-size: 1rem;
+    background-color: var(--bg-ppl);
 }
 
 .rs {
     display: flex;
+
     gap: 20px;
 }
 
-.footer-nav ul li{
+.footer-nav ul li {
     list-style: none;
 }
 
-.RRSS-img{
+.RRSS-img {
     height: 5vh;
     width: auto;
 }
-
