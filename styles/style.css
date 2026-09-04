@@ -55,6 +55,8 @@
     width: auto;
 }
 
+
+
 p {
 
     font-family: var(--font-ppal);
@@ -107,29 +109,41 @@ figcaption {
    ================================================== */
 
 header {
-    
-    display: flex;
-
-   
-    justify-content: space-between;
-    align-items: center;
-    position: sticky;
-
-    top: 0;
-    padding: 0 20px;
+    height: auto;
+    width: auto;
     background-color: var(--bg-ppl);
+    display: grid;
+    grid-template-rows: auto auto;
+    grid-template-areas: 
+    "logo"
+    "nav" ;
+    gap: 10px;
 
-    /* Evita que otros elementos pasen por encima */
-    z-index: 10;
+    align-items: center;
+    justify-items: center ; 
+    padding: 10px;
+
+}
+
+header > a{
+    grid-area: logo;
+}
+header nav {
+    grid-area: nav;
+    width: 100%;
 }
 
 .nav-bar {
     display: flex;
-    gap: 10px;
+    flex-direction: row;
+    justify-content: center;
+    gap: 8px;
+    width: 100%;
+    flex-wrap: nowrap;
 }
 
 .logo {
-    width: 5vw;
+    width: 28vw;
     height: auto;
 }
 
@@ -142,9 +156,11 @@ header nav ul li {
     text-decoration: none;
     color: var(--bg-sec);
     font-weight: 700;
-    padding: 15px;
+    padding: 4px 2px;
     border: 2px solid black;
     border-radius: 15px;
+    font-size: 0.8rem;
+    white-space: nowrap;
 }
 
 
@@ -154,8 +170,20 @@ header nav ul li {
 
 /* ---------- Información general ---------- */
 
-.info-general {
 
+.home-index{
+
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: auto auto;
+    grid-template-areas: 
+    "info"
+    "temas";
+    gap: 20px;
+
+}
+.info-general {
+    grid-area: info;
     display: flex;
     gap: 30px;
     align-items: flex-start;
@@ -196,6 +224,7 @@ header nav ul li {
 /* ---------- Temas destacados ---------- */
 
 .temas-destacados {
+    grid-area: temas;
     margin-bottom: 30px;
     padding: 0 20px;
 }
