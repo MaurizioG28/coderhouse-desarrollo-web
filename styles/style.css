@@ -49,10 +49,10 @@
    ESTILOS GENERALES
    ================================================== */
 
+   
 .home {
-
-    min-height: 100vh;
     width: auto;
+    margin: 0 16px;
 }
 
 
@@ -66,7 +66,7 @@ p {
 h1 {
 
     font-family: var(--font-sec);
-    font-size: 3rem;
+    font-size: 2rem;
     font-weight: 900;
     color: var(--bg-detalles);
 }
@@ -74,7 +74,7 @@ h1 {
 h2 {
     /* Fuente para títulos secundarios */
     font-family: var(--font-sec);
-    font-size: 2.5rem;
+    font-size: 1.7rem;
     font-weight: 700;
 
     /* Color del título */
@@ -86,7 +86,7 @@ h4,
 h5,
 h6 {
     font-family: var(--font-sec);
-    font-size: 2rem;
+    font-size: 1.5rem;
     font-weight: 600;
     color: var(--bg-detalles);
 }
@@ -118,7 +118,6 @@ header {
     "logo"
     "nav" ;
     gap: 10px;
-
     align-items: center;
     justify-items: center ; 
     padding: 10px;
@@ -179,20 +178,24 @@ header nav ul li {
     grid-template-areas: 
     "info"
     "temas";
-    gap: 20px;
+    gap: 10px;
 
 }
 .info-general {
     grid-area: info;
-    display: flex;
-    gap: 30px;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: auto auto;
+    grid-template-areas: 
+    "info-texto"
+    "info-imagen";
+    gap: 20px;
     align-items: flex-start;
-    padding: 20px;
 }
 
 .info-texto {
-
-    flex: 1;
+    grid-area: info-texto;
+    
 }
 
 .info-texto h1 {
@@ -205,12 +208,11 @@ header nav ul li {
 
     /* Mejora la lectura */
     line-height: 1.5;
-    font-size: 1.5rem;
+    font-size: 1.1rem;
 }
 
 .info-imagen {
-
-    flex: 1;
+    grid-area: info-imagen;
     text-align: center;
 }
 
@@ -226,6 +228,7 @@ header nav ul li {
 .temas-destacados {
     grid-area: temas;
     margin-bottom: 30px;
+    margin-top: 20px;
     padding: 0 20px;
 }
 
@@ -243,20 +246,15 @@ header nav ul li {
     display: flex;
     flex-direction: column;
     gap: 15px;
-
-    /* Permite crecer y reducirse */
-    flex: 1 1 400px;
+    flex: 1 1 auto;
 
     /* Evita tarjetas demasiado angostas */
     min-width: 250px;
 
-    /* Espacio interno */
     padding: 20px;
 
     /* Borde visual */
     border: 1px solid var(--bg-detalles);
-
-    /* Esquinas redondeadas */
     border-radius: 15px;
 }
 
@@ -279,9 +277,13 @@ header nav ul li {
 
 
 .via-intro {
-    display: flex;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: auto auto;
+    grid-template-areas: 
+    "via-texto"
+    "via-imagen";
     gap:20px;
-    align-items: center;
     padding: 20px;
 }
 .via-texto h1 {
@@ -293,9 +295,10 @@ header nav ul li {
 }   
 
 .via-texto {
+    grid-area: via-texto;
     display: flex;
     flex: 1;
-    font-size: 1.5rem;
+    font-size: 1.1rem;
     padding: 20px;
     flex-direction: column;
     justify-content: center;
@@ -306,21 +309,21 @@ header nav ul li {
     margin-bottom: 30px; /* Espacio vertical entre párrafos */
 }
 .via-imagen {
-    flex: 1;
+    grid-area: via-imagen;
     text-align: center;
 }
 
 .via-imagen img {
 
     height: auto;
-    width: 35vw;
+    width: 80%;
     border-radius: 20px;
 }
 
 .via-detalles {
-    display: flex;
+    display: grid;
+    grid-template-columns: 1fr;
     gap: 20px;
-    flex-wrap: wrap;
     padding: 20px;
 }
 
@@ -328,12 +331,6 @@ header nav ul li {
     display: flex;
     flex-direction: column;
     gap: 15px;
-
-    /* Hace que las dos tarjetas compartan espacio */
-    flex: 1 1 400px;
-
-    /* Evita que queden demasiado angostas */
-    min-width: 280px;
     padding: 20px;
     border: 1px solid var(--bg-detalles);
     border-radius: 15px;
@@ -568,10 +565,14 @@ header nav ul li {
    ================================================== */
 
 footer {
-    padding: 0 20px;
+
+    padding:20px;
     display: flex;
-    justify-content: space-between;
+    flex-direction: column;
     align-items: center;
+    gap: 15px;
+    text-align: center;
+
     color: var(--color-text);
     font-family: var(--font-ppal);
     font-size: 1rem;
@@ -579,17 +580,177 @@ footer {
     background-color: var(--bg-ppl);
 }
 
-.rs {
-    display: flex;
-
-    gap: 20px;
+.footer-nav {
+    width: auto;
 }
-
 .footer-nav ul li {
+    
     list-style: none;
 }
 
+.rs {
+    
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+}
+
 .RRSS-img {
-    height: 5vh;
-    width: auto;
+    
+    height: 2rem;
+    width: 2rem;
+}
+
+@media (min-width: 1024px) {
+
+    /* ==================================================
+       CONTENEDOR DESKTOP
+       ================================================== */
+
+    .home {
+        max-width: 1500px;
+        margin: 0 auto;
+        padding: 40px 32px;
+    }
+
+
+    /* ==================================================
+       HEADER DESKTOP
+       ================================================== */
+
+    header {
+        grid-template-columns: auto 1fr;
+        grid-template-rows: auto;
+        grid-template-areas:
+            "logo nav";
+
+        min-height: 150px;
+        padding: 20px 40px;
+
+        align-items: center;
+    }
+
+    header > a {
+        justify-self: start;
+    }
+
+    header nav {
+        justify-self: end;
+        width: auto;
+    }
+
+    .logo {
+        width: 120px;
+        height: auto;
+    }
+
+    .nav-bar {
+        justify-content: flex-end;
+        gap: 12px;
+    }
+
+    .nav-link {
+        font-size: 1rem;
+        padding: 8px 10px;
+    }
+
+
+    /* ==================================================
+       INDEX DESKTOP
+       ================================================== */
+
+    .info-general {
+        grid-template-columns: 1.2fr 0.8fr;
+        grid-template-rows: auto;
+        grid-template-areas:
+            "info-texto info-imagen";
+
+        align-items: center;
+        gap: 60px;
+        padding: 30px 0 50px;
+    }
+
+    .info-texto h1 {
+        font-size: 3rem;
+        margin-bottom: 30px;
+    }
+
+    .info-texto p {
+        font-size: 1.2rem;
+        line-height: 1.6;
+    }
+
+    .info-imagen {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .info-imagen img {
+        width: 100%;
+        max-width: 500px;
+        height: auto;
+    }
+
+    .temas-destacados {
+        margin-top: 20px;
+        padding: 0;
+    }
+
+    .contenedor-tarjetas {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 20px;
+    }
+
+    .tarjeta {
+        min-width: 0;
+        padding: 25px;
+    }
+
+
+    /* ==================================================
+       VIA LACTEA DESKTOP
+       ================================================== */
+
+    .via-intro {
+        grid-template-columns: 1.1fr 0.9fr;
+        grid-template-rows: auto;
+        grid-template-areas:
+            "via-texto via-imagen";
+
+        align-items: center;
+        gap: 60px;
+        padding: 40px 0 60px;
+    }
+
+    .via-texto {
+        font-size: 1.2rem;
+    }
+
+    .via-imagen img {
+        width: 100%;
+        max-width: 500px;
+        height: auto;
+    }
+
+    .via-detalles {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 30px;
+        padding: 20px 0;
+    }
+
+
+    /* ==================================================
+       FOOTER DESKTOP
+       ================================================== */
+
+    footer {
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        padding: 20px 40px;
+    }
 }
