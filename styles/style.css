@@ -106,12 +106,14 @@ figcaption {
 
 /* ==================================================
    HEADER Y NAVBAR
-   ================================================== */
+   ==================================================
+
+*/
 
 header {
     height: auto;
     width: auto;
-    background-color: var(--bg-ppl);
+    background-color: transparent;
     display: grid;
     grid-template-rows: auto auto;
     grid-template-areas: 
@@ -120,8 +122,13 @@ header {
     gap: 10px;
     align-items: center;
     justify-items: center ; 
-    padding: 10px;
+    padding: 5px;
 
+}
+
+header nav.navbar {
+    padding: 14px 32px;
+    border-radius: 50px;
 }
 
 header > a{
@@ -134,17 +141,14 @@ header nav {
 
 .nav-bar {
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
     justify-content: center;
-    gap: 8px;
+    gap: 12px;
     width: 100%;
     flex-wrap: nowrap;
 }
 
-.logo {
-    width: 28vw;
-    height: auto;
-}
+
 
 header nav ul li {
     list-style: none;
@@ -156,72 +160,135 @@ header nav ul li {
     color: var(--bg-sec);
     font-weight: 700;
     padding: 4px 2px;
-    border: 2px solid black;
-    border-radius: 15px;
     font-size: 0.8rem;
     white-space: nowrap;
+    border-bottom: 2px solid transparent;
+    transition: color 0.2s ease, border-color 0.2s ease;
+}
+.nav-link:hover {
+    color: var(--bg-sec);
+    border-bottom-color: var(--bg-sec);
+}
+
+.nav-link[aria-current="page"] {
+    color: var(--bg-sec);
+    border-bottom-color: var(--bg-sec);
+}
+.logo {
+    width: 28vw;
+    height: auto;
 }
 
 
 /* ==================================================
    INDEX
+   ================================================== 
+
+        ---------- Información general ---------- 
+
+   ==================================================
+    HERO
    ================================================== */
 
-/* ---------- Información general ---------- */
+    .hero {
+        background: radial-gradient(ellipse at top right, #1b2a5c 0%, #0a1230 55%, #060a1f 100%);
+        position: relative;
+        overflow: hidden;
+        padding: 40px 0;
+    }
 
+    /* Estrellitas de fondo (truco con radial-gradient repetido) */
+    .hero::before {
+        content: "";
+        position: absolute;
+        inset: 0;
+        background-image:
+            radial-gradient(1px 1px at 20px 30px, white, transparent),
+            radial-gradient(1px 1px at 120px 80px, white, transparent),
+            radial-gradient(1px 1px at 200px 150px, white, transparent),
+            radial-gradient(1px 1px at 300px 40px, white, transparent),
+            radial-gradient(1px 1px at 400px 200px, white, transparent),
+            radial-gradient(2px 2px at 500px 100px, white, transparent);
+        background-repeat: repeat;
+        background-size: 550px 300px;
+        opacity: 0.5;
+        pointer-events: none;
+    }
 
-.home-index{
+    .hero-content {
+        position: relative;
+        z-index: 1;
+        display: grid;
+        grid-template-columns: 1fr;
+        gap: 30px;
+    }
 
-    display: grid;
-    grid-template-columns: 1fr;
-    grid-template-rows: auto auto;
-    grid-template-areas: 
-    "info"
-    "temas";
-    gap: 10px;
+    .hero-badge {
+        color: #7fb3ff;
+        font-family: var(--font-sec);
+        font-size: 0.8rem;
+        letter-spacing: 3px;
+        font-weight: 700;
+        margin-bottom: 10px;
+    }
 
-}
-.info-general {
-    grid-area: info;
-    display: grid;
-    grid-template-columns: 1fr;
-    grid-template-rows: auto auto;
-    grid-template-areas: 
-    "info-texto"
-    "info-imagen";
-    gap: 20px;
-    align-items: flex-start;
-}
+    .hero-texto h1 {
+        color: #ffffff;
+        font-size: 2.2rem;
+        margin-bottom: 20px;
+    }
 
-.info-texto {
-    grid-area: info-texto;
-    
-}
+    .hero-texto p {
+        color: #c7d2e8;
+        line-height: 1.6;
+        margin-bottom: 16px;
+        font-size: 1rem;
+    }
 
-.info-texto h1 {
-    text-align: center;
-    margin-bottom: 20px;
-}
+    .btn-explorar {
+        display: inline-flex;
+        align-items: center;
+        gap: 10px;
+        background-color: #0d6efd;
+        color: white;
+        text-decoration: none;
+        font-weight: 700;
+        padding: 12px 24px;
+        border-radius: 50px;
+        margin-top: 10px;
+        transition: background-color 0.2s ease;
+    }
 
-.info-texto p {
-    margin-bottom: 15px;
+    .btn-explorar:hover {
+        background-color: #0b5ed7;
+    }
 
-    /* Mejora la lectura */
-    line-height: 1.5;
-    font-size: 1.1rem;
-}
+    /* Carrusel */
+    .hero-carousel .carousel {
+        border-radius: 20px;
+        overflow: hidden;
+        border: 2px solid rgba(255, 255, 255, 0.15);
+    }
 
-.info-imagen {
-    grid-area: info-imagen;
-    text-align: center;
-}
+    .hero-carousel img {
+        height: 320px;
+        object-fit: cover;
+    }
 
-.info-imagen img {
-    height: auto;
-    width: 65%;
-    border-radius: 20px;
-}
+    .carousel-caption {
+        text-align: left;
+        left: 20px;
+        bottom: 20px;
+        
+    }
+    .carousel-caption h5 {
+        color: #ffffff;
 
+    }
+    .carousel-caption p {
+        color: #ffffff;
+        
+    }
 
 /* ---------- Temas destacados ---------- */
 
@@ -647,6 +714,7 @@ footer {
     }
 
     .nav-bar {
+        flex-direction: row;
         justify-content: flex-end;
         gap: 12px;
     }
@@ -657,35 +725,25 @@ footer {
     }
 
 
-    /* ==================================================
-       INDEX DESKTOP
-       ================================================== */
 
-    .info-general {
-        grid-template-columns: 1.2fr 0.8fr;
-        grid-template-rows: auto;
-        grid-template-areas:
-            "info-texto info-imagen";
+    @media (min-width: 1024px) {
+        .hero {
+            padding: 70px 0;
+        }
 
-        align-items: center;
-        gap: 60px;
-        padding: 30px 0 50px;
-    }
+        .hero-content {
+            grid-template-columns: 1fr 1fr;
+            align-items: center;
+            gap: 60px;
+        }
 
-    .info-texto h1 {
-        font-size: 3rem;
-        margin-bottom: 30px;
-    }
+        .hero-texto h1 {
+            font-size: 3rem;
+        }
 
-    .info-texto p {
-        font-size: 1.2rem;
-        line-height: 1.6;
-    }
-
-    .info-imagen {
-        display: flex;
-        justify-content: center;
-        align-items: center;
+        .hero-carousel img {
+            height: 420px;
+        }
     }
 
     .info-imagen img {

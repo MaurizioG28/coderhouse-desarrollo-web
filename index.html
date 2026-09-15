@@ -3,6 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- BOOTSTRAP -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
 
     <!-- CSS -->
     <link rel="stylesheet" href="./styles/style.css">
@@ -21,158 +23,200 @@
                 >
             </figure>
         </a>
+        <nav class="navbar navbar-expand-md bg-body-tertiary " data-bs-theme="light">
+            <div class="container">
 
-        <nav>
-            <ul class="nav-bar">
-
-                <li>
-                    <a class="nav-link" href="./pages/via-lactea.html">Vía Láctea</a>
-                </li>
-
-                <li>
-                    <a class="nav-link" href="./pages/estrellas.html">Estrellas</a>
-                </li>
-
-                <li>
-                    <a class="nav-link" href="./pages/objetos-cosmicos.html">Objetos cósmicos</a>
-                </li>
-
-                <li>
-                    <a class="nav-link" href="./pages/otras-galaxias.html">Otras galaxias</a>
-                </li>
-
-            </ul>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <ul class="navbar-nav nav-bar ms-auto mb-2 mb-lg-0">
+                        <li class="nav-item">
+                            <a class="nav-link" aria-current="page" href="./index.html">Home</a>
+                            
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="./pages/via-lactea.html">Vía Láctea</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="./pages/estrellas.html">Estrellas</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="./pages/objetos-cosmicos.html">Objetos cósmicos</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="./pages/otras-galaxias.html">Otras galaxias</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
         </nav>
-
     </header>
 
-    <main class="home home-index">
+    <main>
 
+        <!-- HERO con fondo oscuro, full-width -->
+        <section class="hero">
+            <div class="hero-content home">
 
-        <section class = "info-general" >
-            <div class = "info-texto" >
-                <h1>Más allá de las estrellas</h1>
-                <p>
-                    Más allá de las estrellas es un sitio dedicado a la divulgación astronómica.
-                    Aquí encontrarás información sobre nuestra galaxia, la evolución de las estrellas,
-                    los objetos cósmicos y otras galaxias del universo.
-                </p>
-
-                <p>
-                    El objetivo del sitio es presentar estos temas de forma clara y accesible,
-                    organizando la información en distintas secciones para facilitar la exploración
-                    de cada contenido.
-                </p>
-
-                <p>
-                    A lo largo de las diferentes páginas podrás conocer cómo está formada la Vía Láctea,
-                    cómo nacen y evolucionan las estrellas, qué características tienen algunos de los
-                    objetos más sorprendentes del espacio y qué tipos de galaxias existen más allá de
-                    nuestro entorno cercano.
-                </p>
-
-                <p>
-                    Cada sección está pensada como una introducción a estos temas, acompañada por
-                    descripciones e imágenes que ayudan a comprender mejor la escala y la diversidad
-                    del universo.
-                </p>
-            </div>
-
-            <figure class ="info-imagen">
-                <img src="./assets/via-lactea.jpg"
-                    alt="Imagen de la galaxia Vía Láctea"
-                    title="La Vía Láctea">
-            </figure>
-        </section>
-
-
-        <section class="temas-destacados">
-
-
-            <h2>Temas destacados</h2>
-
-            <!--
-                Este contenedor será el padre Flexbox
-                de las cuatro tarjetas.
-            -->
-            <div class="contenedor-tarjetas">
-
-                <!-- Tarjeta 1 -->
-                <article class="tarjeta">
-
-                    <!-- Título de la tarjeta -->
-                    <h3>Nuestra galaxia</h3>
-
-                    <!-- Descripción breve -->
+                <div class="hero-texto">
+                    <p class="hero-badge">DESCUBRE · EXPLORA · APRENDE</p>
+                    <h1>Más allá de las estrellas</h1>
                     <p>
-                        Conoce la estructura de la Vía Láctea, sus principales regiones
-                        y la ubicación de nuestro sistema solar.
+                        Más allá de las estrellas es un sitio dedicado a la divulgación astronómica.
+                        Aquí encontrarás información sobre nuestra galaxia, la evolución de las estrellas,
+                        los objetos cósmicos y otras galaxias del universo.
                     </p>
-
-                    <!-- Enlace hacia la página correspondiente -->
-                    <a class="tarjeta-link" href="./pages/via-lactea.html">
-                        Explorar la Vía Láctea
-                    </a>
-
-                </article>
-
-                
-                <article class="tarjeta">
-
-
-                    <h3>Estrellas: nacimiento y evolución</h3>
-
-
                     <p>
-                        Conoce cómo nacen las estrellas dentro de enormes nubes de gas,
-                        cómo cambian durante millones de años y qué ocurre al final de sus vidas.
+                        Nuestro objetivo es presentar estos temas de forma clara y accesible,
+                        organizando la información en distintas secciones para facilitar la
+                        exploración de cada contenido.
                     </p>
-
-
-                    <a class="tarjeta-link" href="./pages/estrellas.html">
-                        Descubrir las estrellas
-                    </a>
-
-                </article>
-
-                <article class="tarjeta">
-
-                    <h3>Objetos cósmicos</h3>
-
                     <p>
-                        Explora nebulosas, cúmulos estelares, púlsares y agujeros negros,
-                        algunos de los objetos más sorprendentes de nuestra galaxia.
+                        Acompáñanos en un viaje por el cosmos para descubrir cómo está formada
+                        la Vía Láctea, cómo nacen y evolucionan las estrellas, qué características
+                        tienen los objetos más sorprendentes del espacio y qué tipos de galaxias
+                        existen más allá de nuestro entorno cercano.
                     </p>
-
-                    <a class="tarjeta-link" href="./pages/objetos-cosmicos.html">
-                        Conocer los objetos cósmicos
+                    <a href="#temas-destacados" class="btn-explorar">
+                        <i class="bi bi-compass"></i> Explorar
                     </a>
+                </div>
 
-                </article>
+                <div class="hero-carousel">
+                    <div id="carouselEstrellas" class="carousel slide" data-bs-ride="carousel">
+                        <div class="carousel-inner">
+                            <div class="carousel-item active">
+                                <img src="./assets/via-lactea.jpg" class="d-block w-100" alt="La Vía Láctea">
+                                <div class="carousel-caption">
+                                    <h5>La Vía Láctea</h5>
+                                    <p>Nuestro hogar en el universo</p>
+                                </div>
+                            </div>
+                            <div class="carousel-item">
+                                <img src="./assets/estrella.png" class="d-block w-100" alt="Nacimiento de estrellas">
+                                <div class="carousel-caption">
+                                    <h5>Nacimiento de las estrellas</h5>
+                                    <p>Cómo se forman dentro de las nebulosas</p>
+                                </div>
+                            </div>
+                            <div class="carousel-item">
+                                <img src="./assets/galaxias.png" class="d-block w-100" alt="Otras galaxias">
+                                <div class="carousel-caption">
+                                    <h5>Otras galaxias</h5>
+                                    <p>Un vistazo más allá de la Vía Láctea</p>
+                                </div>
+                            </div>
+                        </div>
 
+                        <button class="carousel-control-prev" type="button" data-bs-target="#carouselEstrellas" data-bs-slide="prev">
+                            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                        </button>
+                        <button class="carousel-control-next" type="button" data-bs-target="#carouselEstrellas" data-bs-slide="next">
+                            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                        </button>
 
-                <article class="tarjeta">
-
-
-                    <h3>Otras galaxias</h3>
-
-
-                    <p>
-                        Viaja más allá de nuestra galaxia para conocer galaxias espirales,
-                        elípticas e irregulares, además de nuestras vecinas cósmicas más cercanas.
-                    </p>
-
-                    <a class="tarjeta-link" href="./pages/otras-galaxias.html">
-                        Explorar otras galaxias
-                    </a>
-
-                </article>
+                        <div class="carousel-indicators">
+                            <button type="button" data-bs-target="#carouselEstrellas" data-bs-slide-to="0" class="active" aria-current="true"></button>
+                            <button type="button" data-bs-target="#carouselEstrellas" data-bs-slide-to="1"></button>
+                            <button type="button" data-bs-target="#carouselEstrellas" data-bs-slide-to="2"></button>
+                        </div>
+                    </div>
+                </div>
 
             </div>
-
         </section>
 
+    <!-- TEMAS DESTACADOS, se queda como sección blanca dentro del container -->
+        <div class="home">
 
+            <section class="temas-destacados" id="temas-destacados">
+
+
+                <h2>Temas destacados</h2>
+
+                <!--
+                    Este contenedor será el padre Flexbox
+                    de las cuatro tarjetas.
+                -->
+                <div class="contenedor-tarjetas">
+
+                    <!-- Tarjeta 1 -->
+                    <article class="tarjeta">
+
+                        <!-- Título de la tarjeta -->
+                        <h3>Nuestra galaxia</h3>
+
+                        <!-- Descripción breve -->
+                        <p>
+                            Conoce la estructura de la Vía Láctea, sus principales regiones
+                            y la ubicación de nuestro sistema solar.
+                        </p>
+
+                        <!-- Enlace hacia la página correspondiente -->
+                        <a class="tarjeta-link" href="./pages/via-lactea.html">
+                            Explorar la Vía Láctea
+                        </a>
+
+                    </article>
+
+                    
+                    <article class="tarjeta">
+
+
+                        <h3>Estrellas: nacimiento y evolución</h3>
+
+
+                        <p>
+                            Conoce cómo nacen las estrellas dentro de enormes nubes de gas,
+                            cómo cambian durante millones de años y qué ocurre al final de sus vidas.
+                        </p>
+
+
+                        <a class="tarjeta-link" href="./pages/estrellas.html">
+                            Descubrir las estrellas
+                        </a>
+
+                    </article>
+
+                    <article class="tarjeta">
+
+                        <h3>Objetos cósmicos</h3>
+
+                        <p>
+                            Explora nebulosas, cúmulos estelares, púlsares y agujeros negros,
+                            algunos de los objetos más sorprendentes de nuestra galaxia.
+                        </p>
+
+                        <a class="tarjeta-link" href="./pages/objetos-cosmicos.html">
+                            Conocer los objetos cósmicos
+                        </a>
+
+                    </article>
+
+
+                    <article class="tarjeta">
+
+
+                        <h3>Otras galaxias</h3>
+
+
+                        <p>
+                            Viaja más allá de nuestra galaxia para conocer galaxias espirales,
+                            elípticas e irregulares, además de nuestras vecinas cósmicas más cercanas.
+                        </p>
+
+                        <a class="tarjeta-link" href="./pages/otras-galaxias.html">
+                            Explorar otras galaxias
+                        </a>
+
+                    </article>
+
+                </div>
+
+            </section>
+
+        </div>
     </main>
 
 
@@ -228,5 +272,7 @@
         }
     </script>
 
+    <!-- BOOTSTRAP -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
 </body>
 </html>
