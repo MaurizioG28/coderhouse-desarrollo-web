@@ -170,6 +170,15 @@ header nav ul li {
     color: var(--bg-sec);
     border-bottom-color:var(--bg-sec);
 }
+.nav-link:focus-visible {
+    outline: 2px solid var(--bg-sec);
+    outline-offset: 3px;
+    border-bottom-color: var(--bg-sec);
+}
+.nav-link:active {
+    color: var(--bg-detalles);
+    border-bottom-color: var(--bg-detalles);
+}
 
 .nav-link[aria-current="page"] {
     color: var(--bg-sec);
@@ -257,11 +266,22 @@ header nav ul li {
         padding: 12px 24px;
         border-radius: 50px;
         margin-top: 10px;
-        transition: background-color 0.2s ease;
+        transition: background-color 0.2s ease, transform 0.2s ease;
     }
 
     .btn-explorar:hover {
         background-color: #0b5ed7;
+        transform: translateY(-2px);
+    }
+
+    .btn-explorar:focus-visible {
+        outline: 3px solid #ffffff;
+        outline-offset: 2px;
+    }
+
+    .btn-explorar:active {
+        background-color: #0a58ca;
+        transform: translateY(0);
     }
 
     /* Carrusel */
@@ -347,6 +367,33 @@ header nav ul li {
     /* Borde visual */
     border: 1px solid var(--bg-detalles);
     border-radius: 15px;
+    transition: transform 0.25s ease, box-shadow 0.25s ease, border-color 0.25s ease;
+}
+
+.card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 8px 20px rgba(0, 34, 99, 0.15);
+    border-color: var(--bg-sec);
+}
+
+/* Cuando el foco de teclado entra al botón/link de adentro de la card */
+.card:focus-within {
+    box-shadow: 0 8px 20px rgba(0, 34, 99, 0.15);
+    border-color: var(--bg-sec);
+}
+
+.btn-primary {
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.btn-primary:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 10px rgba(0, 34, 99, 0.25);
+}
+
+.btn-primary:active {
+    transform: translateY(0);
+    box-shadow: none;
 }
 
 .contenedor-tarjetas .card img {
