@@ -127,96 +127,81 @@
             </div>
         </section>
 
-    <!-- TEMAS DESTACADOS, se queda como sección blanca dentro del container -->
-        <div class="home">
-
-            <section class="temas-destacados" id="temas-destacados">
-
-
-                <h2>Temas destacados</h2>
-
-                <!--
-                    Este contenedor será el padre Flexbox
-                    de las cuatro tarjetas.
-                -->
-                <div class="contenedor-tarjetas">
-
-                    <!-- Tarjeta 1 -->
-                    <article class="tarjeta">
-
-                        <!-- Título de la tarjeta -->
-                        <h3>Nuestra galaxia</h3>
-
-                        <!-- Descripción breve -->
-                        <p>
-                            Conoce la estructura de la Vía Láctea, sus principales regiones
-                            y la ubicación de nuestro sistema solar.
-                        </p>
-
-                        <!-- Enlace hacia la página correspondiente -->
-                        <a class="tarjeta-link" href="./pages/via-lactea.html">
-                            Explorar la Vía Láctea
-                        </a>
-
-                    </article>
-
+        <section class ="temas-fondo">
+            <div class="home">
+                <section class="temas-destacados" id="temas-destacados">
+                    <h2>Temas destacados</h2>
                     
-                    <article class="tarjeta">
+                    <div class="contenedor-tarjetas">
+                        <article class="card mb-3"">
+                            <div class="row g-0">
+                                <div class="col-md-4">
+                                    <img src="./assets/via-lactea2.jpg" class="img-fluid rounded start" alt="...">
+                                </div>
+                                <div class="col-md-8">
+                                    <div class="card-body">
+                                        <h5 class="card-title">Nuestra Galaxia</h5>
+                                        <p class="card-text">Conoce la estructura de la Vía Láctea, sus principales regiones y la ubicación de nuestro sistema solar.</p>
+                                        <a href="./pages/via-lactea.html" class="btn btn-primary">Explorar la Vía Láctea</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </article>
 
+                        <article class="card mb-3">
+                            <div class="row g-0">
+                                <div class="col-md-4">
+                                    <img src="./assets/estrella.png" class="img-fluid rounded start" alt="...">
+                                </div>
+                                <div class="col-md-8">
+                                    <div class="card-body">
+                                        <h5 class="card-title">Estrellas: nacimiento y evolución</h5>
+                                        <p class = "card-text">
+                                            Conoce cómo nacen las estrellas dentro de enormes nubes de gas,
+                                            cómo cambian durante millones de años y qué ocurre al final de sus vidas.
+                                        </p>
+                                        <a href="./pages/estrellas.html" class="btn btn-primary">Descubrir las estrellas</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </article>
 
-                        <h3>Estrellas: nacimiento y evolución</h3>
+                        <article class="card mb-3">
+                            <div class="row g-0">
+                                <div class="col-md-4">
+                                    <img src="./assets/objetos-cosmicos.png" class="img-fluid rounded start" alt="...">
+                                </div>
+                                <div class="col-md-8">
+                                    <div class="card-body">
+                                        <h5 class="card-title">Objetos ósmicos</h5>
+                                        <p class="card-text">Explora nebulosas, cúmulos estelares, púlsares y agujeros negros,
+                                            algunos de los objetos más sorprendentes de nuestra galaxia.</p>
+                                        <a href="./pages/objetos-cosmicos.html" class="btn btn-primary">Conocer los objetos cósmicos</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </article>
 
-
-                        <p>
-                            Conoce cómo nacen las estrellas dentro de enormes nubes de gas,
-                            cómo cambian durante millones de años y qué ocurre al final de sus vidas.
-                        </p>
-
-
-                        <a class="tarjeta-link" href="./pages/estrellas.html">
-                            Descubrir las estrellas
-                        </a>
-
-                    </article>
-
-                    <article class="tarjeta">
-
-                        <h3>Objetos cósmicos</h3>
-
-                        <p>
-                            Explora nebulosas, cúmulos estelares, púlsares y agujeros negros,
-                            algunos de los objetos más sorprendentes de nuestra galaxia.
-                        </p>
-
-                        <a class="tarjeta-link" href="./pages/objetos-cosmicos.html">
-                            Conocer los objetos cósmicos
-                        </a>
-
-                    </article>
-
-
-                    <article class="tarjeta">
-
-
-                        <h3>Otras galaxias</h3>
-
-
-                        <p>
-                            Viaja más allá de nuestra galaxia para conocer galaxias espirales,
-                            elípticas e irregulares, además de nuestras vecinas cósmicas más cercanas.
-                        </p>
-
-                        <a class="tarjeta-link" href="./pages/otras-galaxias.html">
-                            Explorar otras galaxias
-                        </a>
-
-                    </article>
-
-                </div>
-
-            </section>
-
-        </div>
+                        <article class="card mb-3"">
+                            <div class="row g-0">
+                                <div class="col-md-4">
+                                    <img src="./assets/galaxias.png" class="img-fluid rounded start" alt="...">
+                                </div>
+                                <div class="col-md-8">
+                                    <div class="card-body">
+                                        <h5 class="card-title">Otras galaxias</h5>
+                                        <p class="card-text"> Viaja más allá de nuestra galaxia para conocer galaxias espirales,
+                                            elípticas e irregulares, además de nuestras vecinas cósmicas más cercanas.</p>
+                                        <a href="./pages/otras-galaxias.html" class="btn btn-primary">Explorar otras galaxias</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </article>
+                    </div>
+                </section>
+            </div>
+        </section>
+        
     </main>
 
 

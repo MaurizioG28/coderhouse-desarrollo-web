@@ -39,9 +39,9 @@
 
     /* Fuente secundaria */
     --font-sec: "Space Grotesk", sans-serif;
-
-    /* Color general del texto */
-    --color-text: #000000;
+    --color-text-hero: #ffffff;
+    --color-text-hero: #ffffff;
+    --color-text-footer: #65AFFF;
 }
 
 
@@ -58,9 +58,7 @@
 
 
 p {
-
     font-family: var(--font-ppal);
-    color: var(--color-text);
 }
 
 h1 {
@@ -103,6 +101,9 @@ figcaption {
     font-family: var(--font-ppal);
 }
 
+.hero-objetos-imagen figcaption {
+    color: #ffffff;
+}
 
 /* ==================================================
    HEADER Y NAVBAR
@@ -167,7 +168,7 @@ header nav ul li {
 }
 .nav-link:hover {
     color: var(--bg-sec);
-    border-bottom-color: var(--bg-sec);
+    border-bottom-color:var(--bg-sec);
 }
 
 .nav-link[aria-current="page"] {
@@ -184,7 +185,7 @@ header nav ul li {
    INDEX
    ================================================== 
 
-        ---------- Información general ---------- 
+        ---------- MAIN ---------- 
 
    ==================================================
     HERO
@@ -224,7 +225,7 @@ header nav ul li {
     }
 
     .hero-badge {
-        color: #7fb3ff;
+        color: var(--color-text-hero);
         font-family: var(--font-sec);
         font-size: 0.8rem;
         letter-spacing: 3px;
@@ -233,13 +234,13 @@ header nav ul li {
     }
 
     .hero-texto h1 {
-        color: #ffffff;
+        color: var(--color-text-hero);
         font-size: 2.2rem;
         margin-bottom: 20px;
     }
 
     .hero-texto p {
-        color: #c7d2e8;
+        color: var(--color-text-hero);
         line-height: 1.6;
         margin-bottom: 16px;
         font-size: 1rem;
@@ -264,15 +265,16 @@ header nav ul li {
     }
 
     /* Carrusel */
-    .hero-carousel .carousel {
+    .hero-carousel .carousel:hover {
         border-radius: 20px;
         overflow: hidden;
-        border: 2px solid rgba(255, 255, 255, 0.15);
+        border: 4px solid rgba(255, 255, 255, 0.692);
     }
 
     .hero-carousel img {
         height: 320px;
         object-fit: cover;
+        border-radius: 20px;
     }
 
     .carousel-caption {
@@ -291,38 +293,66 @@ header nav ul li {
     }
 
 /* ---------- Temas destacados ---------- */
-
-.temas-destacados {
+.temas-fondo {
+    background-image: url(../assets/fondo-2.png);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+/* .temas-destacados {
     grid-area: temas;
     margin-bottom: 30px;
     margin-top: 20px;
     padding: 0 20px;
-}
+
+} */
 
 .contenedor-tarjetas {
 
     display: flex;
-
     gap: 10px;
     flex-wrap: wrap;
     margin-top: 20px;
 }
 
-.tarjeta {
-    
+/* Hace que la card sea un contenedor flex de alto completo,
+   para que el botón siempre quede anclado abajo */
+.contenedor-tarjetas .card {
     display: flex;
     flex-direction: column;
+    height: 100%;
+}
+
+/* La row interna (imagen + texto) ocupa todo el alto disponible de la card */
+.contenedor-tarjetas .card .row {
+    flex: 1;
+}
+
+/* El card-body también se vuelve columna de alto completo */
+.contenedor-tarjetas .card-body {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+}
+
+/* El botón se empuja siempre al fondo, sin importar el largo del texto de arriba */
+.contenedor-tarjetas .card-body .btn-primary {
+    margin-top: auto;
+    align-self: flex-start;
+}
+
+.card {
     gap: 15px;
-    flex: 1 1 auto;
-
-    /* Evita tarjetas demasiado angostas */
-    min-width: 250px;
-
     padding: 20px;
-
     /* Borde visual */
     border: 1px solid var(--bg-detalles);
     border-radius: 15px;
+}
+
+.contenedor-tarjetas .card img {
+    height: 160px;
+    width: 100%;
+    object-fit: cover;
 }
 
 
@@ -486,53 +516,23 @@ header nav ul li {
 
 /* ---------- OBJETOS COSMICOS ---------- */
 
-/* ---------- OBJETOS COSMICOS ---------- */
 
-.objetos-intro {
-    display: flex;
-    gap: 20px;
-    align-items: center;
-    padding: 20px;
+.cards-objetos .card {
+    height: 100%;
+}
+.temas-fondo {
+    padding: 2rem;
 }
 
-.objetos-texto {
-    flex: 1;
-    font-size: 1.5rem;
-    line-height: 1.5;
+.cards-objetos .card img {
+    height: 100%;
+    aspect-ratio: 16 / 9;
+    object-fit: cover;
 }
-
-.objetos-texto h1 {
-    margin-bottom: 20px;
-}
-
-.objetos-imagen {
-    flex: 1;
-    text-align: center;
-}
-
 .objetos-imagen img {
-    width: 35vw;
+    width: 80%;
     height: auto;
     border-radius: 20px;
-}
-
-.objetos-contenedor {
-    display: flex;
-    gap: 20px;
-    flex-wrap: wrap;
-    padding: 20px;
-    margin-bottom: 20px;
-}
-
-.objeto-card {
-    display: flex;
-    flex-direction: column;
-    gap: 15px;
-    flex: 1 1 350px;
-    min-width: 250px;
-    padding: 20px;
-    border: 1px solid var(--bg-detalles);
-    border-radius: 15px;
 }
 
 
@@ -639,12 +639,13 @@ footer {
     align-items: center;
     gap: 15px;
     text-align: center;
-
-    color: var(--color-text);
     font-family: var(--font-ppal);
     font-size: 1rem;
     font-weight: 900;
-    background-color: var(--bg-ppl);
+    background-image: url(../assets/fondo-footer.png);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
 }
 
 .footer-nav {
@@ -653,6 +654,9 @@ footer {
 .footer-nav ul li {
     
     list-style: none;
+}
+footer p{
+    color: var(--color-text-footer);
 }
 
 .rs {
@@ -680,6 +684,7 @@ footer {
         max-width: 1500px;
         margin: 0 auto;
         padding: 40px 32px;
+
     }
 
 
@@ -726,24 +731,27 @@ footer {
 
 
 
-    @media (min-width: 1024px) {
-        .hero {
-            padding: 70px 0;
-        }
+   
+    .hero {
+        padding: 70px 0;
+    }
 
-        .hero-content {
-            grid-template-columns: 1fr 1fr;
-            align-items: center;
-            gap: 60px;
-        }
+    .hero-content {
+        grid-template-columns: 1fr 1fr;
+        align-items: center;
+        gap: 60px;
+    }
 
-        .hero-texto h1 {
-            font-size: 3rem;
-        }
+    .hero-texto h1 {
+        font-size: 3rem;
+    }
 
-        .hero-carousel img {
-            height: 420px;
-        }
+    .hero-carousel img {
+        height: 420px;
+    }
+    
+    .contenedor-tarjetas .card{
+        max-height: 16rem;
     }
 
     .info-imagen img {
@@ -762,12 +770,6 @@ footer {
         grid-template-columns: repeat(2, 1fr);
         gap: 20px;
     }
-
-    .tarjeta {
-        min-width: 0;
-        padding: 25px;
-    }
-
 
     /* ==================================================
        VIA LACTEA DESKTOP
@@ -800,6 +802,15 @@ footer {
         padding: 20px 0;
     }
 
+
+    /* ==================================================
+       OBJETOS COSMICOS DESKTOP
+       ================================================== */
+
+
+    .objetos-imagen img {
+         width: 35vw;
+    }
 
     /* ==================================================
        FOOTER DESKTOP
