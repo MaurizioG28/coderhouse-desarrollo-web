@@ -25,7 +25,6 @@
         </a>
         <nav class="navbar navbar-expand-md bg-body-tertiary " data-bs-theme="light">
             <div class="container">
-
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
                 </button>
@@ -53,86 +52,98 @@
         </nav>
     </header>
 
-    <main class="home">
+    <main>
 
-        <section class="estrellas-intro">
-
-            <div class="estrellas-texto">
-
-                <h1>Estrellas: nacimiento y evolución</h1>
-
-                <!-- Introducción -->
-                <p>
+        
+          <!-- HERO con fondo oscuro, full-width -->
+        <section class="hero">
+            <div class="hero-content home">
+                <div class="hero-texto">
+                    <p class="hero-badge">DESCUBRE · EXPLORA · APRENDE</p>
+                    <h1>Estrellas: nacimiento y evolución</h1>
+                    <!-- Introducción general al tema de las estrellas -->
+                    <p>
                     Las estrellas son enormes cuerpos celestes que producen luz y energía.
                     Su evolución depende principalmente de la cantidad de materia con la
                     que se formaron.
-                </p>
+                    </p>
 
+                    <!-- Explica de forma general cómo se originan -->
+                    <p>
+                    Se forman a partir de grandes nubes de gas y polvo que, debido a la gravedad,
+                    comienzan a concentrarse hasta alcanzar condiciones suficientes para iniciar
+                    procesos que liberan enormes cantidades de energía.
+                    </p>
+
+                    <!-- Explica que no todas evolucionan de la misma forma -->
+                    <p>
+                    A lo largo de su vida, las estrellas atraviesan distintas etapas. Algunas
+                    permanecen estables durante millones de años, mientras que otras pueden
+                    expandirse, cambiar de color y terminar su ciclo de formas muy diferentes,
+                    según su tamaño y masa.
+                    </p>
+                    <a href="#temas-destacados" class="btn-explorar">
+                        <i class="bi bi-compass"></i> Explorar
+                    </a>
+                </div>
+
+                <div class="hero-estrellas-imagen">
+                    <figure class="estrellas-imagen">
+                        <img src="../assets/estrella.png"alt="Estrellas brillando dentro de una nebulosa" title="Nacimiento de las estrellas">
+                        <figcaption>
+                            Las nebulosas contienen materiales que pueden participar
+                            en la formación de nuevas estrellas.
+                        </figcaption>
+                    </figure>
+                </div>
             </div>
-
-            <figure class="estrellas-imagen">
-
-                <img
-                    src="../assets/estrella.png"
-                    alt="Estrellas brillando dentro de una nebulosa"
-                    title="Nacimiento de las estrellas"
-                >
-
-                <figcaption>
-                    Las nebulosas contienen materiales que pueden participar
-                    en la formación de nuevas estrellas.
-                </figcaption>
-
-            </figure>
-
         </section>
 
-
-        <!-- Contenedor de las etapas -->
-        <section class="estrellas-etapas">
-
-            <!-- Etapa 1 -->
-            <article class="estrellas-card">
-
-                <h2>El nacimiento de una estrella</h2>
-
-                <p>
-                    Las estrellas comienzan a formarse dentro de grandes nubes de gas y
-                    polvo llamadas nebulosas. La gravedad concentra parte de ese material
-                    hasta originar una nueva estrella.
-                </p>
-
-            </article>
-
-
-            <!-- Etapa 2 -->
-            <article class="estrellas-card">
-
-                <h2>Etapas de su evolución</h2>
-
-                <ol>
-                    <li>Formación dentro de una nebulosa.</li>
-                    <li>Nacimiento de una protoestrella.</li>
-                    <li>Etapa estable de la estrella.</li>
-                    <li>Expansión y transformación final.</li>
-                </ol>
-
-            </article>
-
-
-            <!-- Etapa 3 -->
-            <article class="estrellas-card">
-
-                <h2>El final de las estrellas</h2>
-
-                <p>
-                    Algunas estrellas terminan convirtiéndose en enanas blancas. Otras,
-                    especialmente las de mayor tamaño, pueden experimentar grandes
-                    explosiones y dejar como resultado objetos extremadamente densos.
-                </p>
-
-            </article>
-
+        
+        <section class="temas-fondo">
+            <div class="home">
+                <section class="temas-destacados">
+                    <div class="row row-cols-1 row-cols-md-3 g-4 cards-estrellas">
+                        <div class="col">
+                            <article class="card">
+                                <div class="card-body">
+                                    <h2 class="card-title">El nacimiento de una estrella</h2>
+                                    <p>
+                                        Las estrellas comienzan a formarse dentro de grandes nubes de gas y
+                                        polvo llamadas nebulosas. La gravedad concentra parte de ese material
+                                        hasta originar una nueva estrella.
+                                    </p>
+                                </div>
+                            </article>
+                        </div>
+                        <div class="col">
+                            <article class="card">
+                                <div class="card-body">
+                                    <h2 class="card-title">Etapas de su evolución</h2>
+                                    <ol>
+                                        <li>Formación dentro de una nebulosa.</li>
+                                        <li>Nacimiento de una protoestrella.</li>
+                                        <li>Etapa estable de la estrella.</li>
+                                        <li>Expansión y transformación final.</li>
+                                    </ol>         
+                                </div>
+                            </article>
+                        </div>
+                        <div class="col">
+                            <article class="card">
+                                <div class="card-body">
+                                    <h2 class="card-title">El final de las estrellas</h2>
+                                    <p>
+                                        Algunas estrellas terminan convirtiéndose en enanas blancas. Otras,
+                                        especialmente las de mayor tamaño, pueden experimentar grandes
+                                        explosiones y dejar como resultado objetos extremadamente densos.
+                                    </p>
+                                </div>
+                            </article>
+                        </div>
+                    </div>
+                </section>
+            </div>
         </section>
 
     </main>

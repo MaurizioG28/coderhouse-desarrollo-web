@@ -418,6 +418,9 @@ header nav ul li {
 
 
 /* ---------- VIA LACTEA ---------- */
+.cards-via .card {
+    height: 100%;
+}
 
 
 .via-intro {
@@ -458,10 +461,15 @@ header nav ul li {
 }
 
 .via-imagen img {
-
-    height: auto;
     width: 80%;
+    aspect-ratio: 4 / 3;
+    object-fit: cover;
     border-radius: 20px;
+    padding-bottom: 1rem;
+}
+
+.hero-via-imagen figcaption {
+    color: #ffffff;
 }
 
 .via-detalles {
@@ -490,75 +498,32 @@ header nav ul li {
 
 /* ---------- ESTRELLAS ---------- */
 
-/* ---------- ESTRELLAS ---------- */
 
-.estrellas-intro {
-    display: flex;
-    gap: 20px;
-    align-items: center;
-    padding: 20px;
+.cards-estrellas .card {
+    height: 100%;
+}
+.temas-fondo {
+    padding: 2rem;
 }
 
-.estrellas-texto {
-    flex: 1;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    font-size: 1.5rem;
-    padding: 20px;
-}
-
-.estrellas-texto h1 {
-    margin-bottom: 20px;
-}
-
-.estrellas-texto p {
-    margin-bottom: 30px;
-    line-height: 1.5;
-}
-
-.estrellas-imagen {
-    flex: 1;
-    text-align: center;
+.cards-estrellas .card img {
+    height: 100%;
+    aspect-ratio: 16 / 9;
+    object-fit: cover;
 }
 
 .estrellas-imagen img {
-    width: 35vw;
-    height: auto;
+    width: 100%;
+    aspect-ratio: 4 / 3;
+    object-fit: cover;
     border-radius: 20px;
+    padding-bottom: 1rem;
 }
 
-.estrellas-etapas {
-    display: flex;
-    gap: 20px;
-    flex-wrap: wrap;
-    padding: 20px;
-    margin-bottom: 20px;
+.hero-estrellas-imagen figcaption {
+    color: #ffffff;
 }
 
-.estrellas-card {
-    display: flex;
-    flex-direction: column;
-    gap: 15px;
-    flex: 1 1 300px;
-    min-width: 250px;
-    padding: 20px;
-    border: 1px solid var(--bg-detalles);
-    border-radius: 15px;
-}
-
-.estrellas-card h2 {
-    text-align: center;
-    margin-bottom: 10px;
-}
-.estrellas-card ol{
-    margin-left: 30px;
-}
-.estrellas-card p,
-.estrellas-card li {
-    font-size: 1.2rem;
-    line-height: 1.5;
-}
 
 
 /* ---------- OBJETOS COSMICOS ---------- */
@@ -576,14 +541,15 @@ header nav ul li {
     aspect-ratio: 16 / 9;
     object-fit: cover;
 }
+
 .objetos-imagen img {
     width: 80%;
-    height: auto;
+    aspect-ratio: 4 / 3;
+    object-fit: cover;
     border-radius: 20px;
+    padding-bottom: 1rem;
 }
 
-
-/* ---------- OTRAS GALAXIAS ---------- */
 
 /* ---------- OTRAS GALAXIAS ---------- */
 
@@ -615,9 +581,11 @@ header nav ul li {
 }
 
 .galaxias-imagen img {
-    width: 35vw;
-    height: auto;
+    width: 80%;
+    aspect-ratio: 4 / 3;
+    object-fit: cover;
     border-radius: 20px;
+    padding-bottom: 1rem;
 }
 
 .galaxias-tipos {
@@ -643,6 +611,9 @@ header nav ul li {
     border-radius: 15px;
 }
 
+.cards-galaxias .card {
+    height: 100%;
+}
 .galaxia-card h3 {
     margin-bottom: 15px;
     text-align: center;
@@ -673,7 +644,9 @@ header nav ul li {
     line-height: 1.5;
 }
 
-
+.hero-galaxias-imagen figcaption {
+    color: #ffffff;
+}
 /* ==================================================
    FOOTER
    ================================================== */
@@ -856,7 +829,17 @@ footer p{
 
 
     .objetos-imagen img {
-         width: 35vw;
+        width: 35vw;
+    }
+
+    /* ==================================================
+        ESTRELLAS COSMICOS DESKTOP
+       ================================================== */
+
+
+
+    .estrellas-imagen img {
+        width: 35vw;
     }
 
     /* ==================================================
